@@ -16,4 +16,15 @@ public record RegistrarUsuarioDto(
         @NotBlank(message = "Debe tener entre 6 y 10 caracteres.") @Pattern(regexp = "\\d{6,10}")
         String password
 ) {
+        public Long getId() {
+                return id;
+        }
+
+        public String getName() {
+                return name;
+        }
+
+        public String getEmail() {
+                return email;
+        }
 }
